@@ -4,10 +4,130 @@
   <meta charset="UTF-8" />
   <title>De incompetente a hacker – Juan-J</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Blog de Juan-J, un noob que está aprendiendo ciberseguridad desde cero y documenta el proceso." />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #050816;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 1.5rem 1rem 1rem;
+      border-bottom: 1px solid #111827;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem 3rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .subtitle {
+      margin-top: .5rem;
+      color: #9ca3af;
+      font-size: .95rem;
+    }
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 999px;
+      border: 2px solid #38bdf8;
+      margin: 1rem auto 0;
+      display: block;
+      object-fit: cover;
+    }
+    main {
+      margin-top: 2rem;
+    }
+    .post {
+      background: #020617;
+      border-radius: .9rem;
+      border: 1px solid #1f2937;
+      padding: 1.5rem;
+      box-shadow: 0 18px 35px rgba(0,0,0,.5);
+    }
+    .post h2 {
+      margin-top: 0;
+      margin-bottom: .5rem;
+    }
+    .post-meta {
+      font-size: .8rem;
+      color: #9ca3af;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.6;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      font-size: .8rem;
+      color: #6b7280;
+      padding: 2rem 1rem 1rem;
+      border-top: 1px solid #111827;
+    }
+  </style>
 </head>
 <body>
-  <h1>De incompetente a hacker</h1>
-  <p>Hola, soy Juan-J. Si estás viendo esto, GitHub Pages funciona.</p>
+  <header>
+    <div class="container">
+      <!-- Cuando subas tu imagen, llámala avatar.png -->
+      <img src="avatar.png" alt="Avatar de Juan-J" class="avatar" />
+      <h1>De incompetente a hacker</h1>
+      <p class="subtitle">Diario de Juan-J, un noob que está aprendiendo ciberseguridad desde cero.</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <article class="post">
+        <h2>Quién soy y qué es esto</h2>
+        <div class="post-meta">Publicado por Juan-J — Nivel actual: “no tengo ni idea (todavía)”</div>
+        <p>
+          Buenas, soy Juan-J. No soy hacker, no soy experto y no vengo a darte lecciones.
+          Este blog es simplemente mi cuaderno de notas mientras aprendo ciberseguridad
+          desde cero.
+        </p>
+        <p>
+          Aquí iré apuntando lo que voy estudiando: redes, sistemas, comandos, pequeños
+          laboratorios, cosas que rompo y cosas que consigo hacer funcionar. Intentaré
+          explicarlo con un lenguaje sencillo, como si se lo contara a otro compañero
+          que también está empezando.
+        </p>
+        <p>
+          Si tú también estás empezando, quizá te sirva para no sentirte tan perdido.
+          Y si ya controlas, cualquier corrección o sugerencia será bienvenida.
+        </p>
+        <p>
+          La idea es ir pasando poco a poco de “incompetente total” a entender mejor
+          cómo funcionan las cosas por debajo: redes, sistemas operativos, servicios,
+          seguridad… sin postureo, sin humo y con muchos errores por el camino.
+        </p>
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Juan-J — Construyendo el camino de incompetente a hacker.</p>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 </body>
 </html>
 
