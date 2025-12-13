@@ -1,187 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Juan-J-Dev – De incompetente a hacker</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>De incompetente a hacker – Juan-J</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Blog de Juan-J, un noob que está aprendiendo ciberseguridad desde cero y documenta el proceso." />
   <style>
-    :root {
-      color-scheme: dark;
-    }
-
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 60%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #050816;
       color: #e5e7eb;
-      line-height: 1.6;
     }
-
     header {
-      padding: 3rem 1.5rem 2rem;
-      text-align: center;
+      padding: 1.5rem 1rem 1rem;
       border-bottom: 1px solid #111827;
+      text-align: center;
     }
-
-    header h1 {
-      margin: 0 0 0.5rem;
-      font-size: 2.2rem;
-      letter-spacing: 0.04em;
-    }
-
-    header h1 span {
-      color: #f97316; /* toque naranja en el título */
-    }
-
-    header p {
-      margin: 0.25rem 0;
-      color: #9ca3af;
-      max-width: 620px;
-      margin-inline: auto;
-      font-size: 0.98rem;
-    }
-
-    main {
+    .container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 2.5rem 1.5rem 3.5rem;
+      padding: 0 1rem 3rem;
     }
-
-    .intro-card {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 1.75rem 1.75rem 2rem;
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: 1rem;
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .subtitle {
+      margin-top: .5rem;
+      color: #9ca3af;
+      font-size: .95rem;
+    }
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 999px;
+      border: 2px solid #38bdf8;
+      margin: 1rem auto 0;
+      display: block;
+      object-fit: cover;
+    }
+    main {
+      margin-top: 2rem;
+    }
+    .post {
+      background: #020617;
+      border-radius: .9rem;
       border: 1px solid #1f2937;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
-      text-align: left;
+      padding: 1.5rem;
+      box-shadow: 0 18px 35px rgba(0,0,0,.5);
     }
-
-    .intro-card h2 {
+    .post h2 {
       margin-top: 0;
-      margin-bottom: 0.75rem;
-      font-size: 1.3rem;
+      margin-bottom: .5rem;
     }
-
-    .intro-card p {
-      margin: 0.4rem 0;
-      font-size: 0.95rem;
-      color: #d1d5db;
-    }
-
-    .intro-meta {
-      font-size: 0.85rem;
+    .post-meta {
+      font-size: .8rem;
       color: #9ca3af;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
-
-    .diary-wrapper {
-      margin-top: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
+    p {
+      line-height: 1.6;
+      margin-top: 0;
+      margin-bottom: 1rem;
     }
-
-    .diary-help {
-      font-size: 0.8rem;
-      color: #9ca3af;
-    }
-
-    .diary-button {
-      display: inline-block;
-      margin-top: 0.25rem;
-      padding: 0.75rem 1.7rem;
-      border-radius: 9999px;
-      background-color: #f97316; /* naranja principal */
-      color: #111827;
-      font-weight: 600;
+    a {
+      color: #38bdf8;
       text-decoration: none;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      box-shadow: 0 10px 28px rgba(249, 115, 22, 0.4);
-      transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease,
-        background-color 0.15s ease,
-        color 0.15s ease;
     }
-
-    .diary-button:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.65);
-      background-color: #fb923c; /* naranja más claro */
-      color: #020617;
+    a:hover {
+      text-decoration: underline;
     }
-
     footer {
       text-align: center;
-      font-size: 0.78rem;
+      font-size: .8rem;
       color: #6b7280;
-      padding: 1.5rem 0 2rem;
+      padding: 2rem 1rem 1rem;
       border-top: 1px solid #111827;
-      background-color: #020617;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding-top: 2.5rem;
-      }
-      header h1 {
-        font-size: 1.7rem;
-      }
-      .intro-card {
-        padding: 1.5rem 1.25rem 1.75rem;
-      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1><span>Juan-J-Dev</span> · De incompetente a hacker</h1>
-    <p>
-      Blog personal sobre redes, sistemas y ciberseguridad. Aquí documento mi camino real:
-      lo que estudio, lo que rompo y lo que consigo arreglar.
-    </p>
+    <div class="container">
+      <!-- Cuando subas tu imagen, llámala avatar.png -->
+      <img src="images/AVATAR.png" alt="Avatar de Juan-J" class="avatar" />
+      <h1>De incompetente a hacker</h1>
+      <p class="subtitle">Diario de Juan-J, un noob que está aprendiendo ciberseguridad desde cero.</p>
+    </div>
   </header>
 
-  <main>
-    <section class="intro-card">
-      <h2>¿Quién hay detrás de todo esto?</h2>
-      <p class="intro-meta">
-        Administrador de sistemas y redes · Soporte al usuario · Estudiante de Ingeniería Informática ·
-        Aspirante a vivir en el lado oscuro (legal) de la ciberseguridad.
-      </p>
-      <p>
-        Me llamo Juanjo. Llevo años trabajando entre servidores, redes e incidencias de usuario,
-        mientras intento consolidar todo lo que he ido estudiando: formación profesional,
-        universidad, certificaciones y cursos de ciberseguridad.
-      </p>
-      <p>
-        Este sitio es mi cuaderno abierto: un lugar donde ordenar ideas, apuntes, pruebas de
-        laboratorio y errores que cometo por el camino. No vas a encontrar postureo ni gurús,
-        solo el progreso (a veces lento y torpe) de alguien que quiere entender de verdad lo que toca.
-      </p>
-
-      <div class="diary-wrapper">
-        <span class="diary-help">
-          Si quieres ver en qué ando metido, qué estudio y qué voy rompiendo/arreglando día a día:
-        </span>
-        <a class="diary-button" href="{{ '/diario.html' | relative_url }}">
-          Diario
-        </a>
-      </div>
-    </section>
-  </main>
-
+  <div class="container">
+    <main>
+      <article class="post">
+        <h2>Quién soy y qué es esto</h2>
+        <div class="post-meta">Publicado por Juan-J — Nivel actual: “no tengo ni idea (todavía)”</div>
+        <p>
+          Buenas, soy Juan-J. No soy hacker, no soy experto y no vengo a darte lecciones.
+          Este blog es simplemente mi cuaderno de notas mientras aprendo ciberseguridad
+          desde cero.
+        </p>
+        <p>
+          Aquí iré apuntando lo que voy estudiando: redes, sistemas, comandos, pequeños
+          laboratorios, cosas que rompo y cosas que consigo hacer funcionar. Intentaré
+          explicarlo con un lenguaje sencillo, como si se lo contara a otro compañero
+          que también está empezando.
+        </p>
+        <p>
+          Si tú también estás empezando, quizá te sirva para no sentirte tan perdido.
+          Y si ya controlas, cualquier corrección o sugerencia será bienvenida.
+        </p>
+        <p>
+          La idea es ir pasando poco a poco de “incompetente total” a entender mejor
+          cómo funcionan las cosas por debajo: redes, sistemas operativos, servicios,
+          seguridad… sin postureo, sin humo y con muchos errores por el camino.
+        </p>
+      </article>
+    </main>
+  </div>
   <footer>
-    © {{ "now" | date: "%Y" }} Juanjo – De incompetente a hacker
+    <p>© <span id="year"></span> Juan-J — Construyendo el camino de incompetente a hacker.</p>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </footer>
 </body>
 </html>
